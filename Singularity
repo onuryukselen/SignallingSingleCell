@@ -81,7 +81,7 @@ From: ubuntu:16.04
     echo install.packages\(\"devtools\"\, dependencies = TRUE, repos\=\'https://cloud.r-project.org\'\, Ncpus\=${NPROCS}\) | R --slave
     yes | apt-get install libmariadb-client-lgpl-dev
     R --slave -e "library(devtools); devtools::install_github('davismcc/scater', build_vignettes = TRUE)"
-    R --slave -e "library(devtools); install.packages('rmarkdown')"
+    echo install.packages\(\"rmarkdown\"\, dependencies = TRUE, repos\=\'https://cloud.r-project.org\'\, Ncpus\=${NPROCS}\) | R --slave
     R --slave -e "source('https://bioconductor.org/biocLite.R'); biocLite('scater')"
     R --slave -e "source('https://bioconductor.org/biocLite.R'); biocLite('BiocStyle')"
     R --slave -e "source('https://bioconductor.org/biocLite.R'); biocLite('destiny')"
