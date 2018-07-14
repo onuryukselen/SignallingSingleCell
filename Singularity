@@ -88,7 +88,8 @@ From: ubuntu:16.04
     R --slave -e "source('https://bioconductor.org/biocLite.R'); biocLite('mvoutlier')"
     R --slave -e "source('https://bioconductor.org/biocLite.R'); biocLite('mvoutlier')"
     R --slave -e "library(devtools); install_github('kgellatl/SignallingSingleCell')"
-    
+    R --slave -e "source('library("SignallingSingleCell")')"
+    R --slave -e "source('library("SingleCellExperiment")')"   
     
     
     
